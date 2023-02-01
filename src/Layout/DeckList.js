@@ -1,11 +1,12 @@
 import React from "react"; 
 import { useState, useEffect } from "react";
 import { listDecks } from "../utils/api";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import DeckDelete from "../Delete/DeckDelete";
 
 function DeckList() {
 
+  const { deckId } = useParams();
   const [decks, setDecks] = useState([]);
   const history = useHistory();
 
@@ -27,7 +28,7 @@ function DeckList() {
     }
 
     deckList();
-  }, [])
+  }, [deckId])
 
   const printList = decks.map((deck) => {
     return (

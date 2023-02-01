@@ -30,7 +30,7 @@ function Study() {
 
     showCard();
     return () => deckAbort.abort();
-  },[]) //reruns effect when deckId changes
+  },[deckId]) //reruns effect when deckId changes
 
  
 if (deck && deck.id && cards.length < 3) {

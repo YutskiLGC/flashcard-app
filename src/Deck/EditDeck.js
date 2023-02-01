@@ -3,7 +3,7 @@ import { useHistory, Link, useParams } from "react-router-dom";
 import { readDeck } from "../utils/api";
 import { updateDeck } from "../utils/api/index";
 
-function EditDeck({}) {
+function EditDeck() {
   const history = useHistory();
   const { deckId } = useParams();
 

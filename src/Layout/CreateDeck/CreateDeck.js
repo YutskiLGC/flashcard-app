@@ -13,7 +13,7 @@ function CreateDeck() {
     const [newDeck, setNewDeck] = useState(initialFormState);
 
     async function handleSubmit(e) {
-        e.preventDefault();
+       //e.preventDefault();
         const response = await createDeck(newDeck);
         history.push(`/decks/${response.id}`);
     }
