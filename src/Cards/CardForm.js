@@ -22,7 +22,7 @@ function CardForm({ onChangeBackHandler, onChangeFrontHandler, submitHandler, fr
           ></textarea>
         </div>
         <div className="form-group">
-          <label for="back">Back</label>
+          <label htmlFor="back">Back</label>
           <textarea 
           type="text" 
           className="form-control" 
