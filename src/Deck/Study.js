@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { readDeck } from "../utils/api/index";
-import CardList from "../Cards/CardsCardList";
+import CardList from "../Cards/CardList";
 
 function Study() {
 
@@ -30,7 +30,7 @@ function Study() {
 
     showCard();
     return () => deckAbort.abort();
-  },[deckId]) //reruns effect when deckId changes
+  },[]) //reruns effect when deckId changes
 
  
 if (deck && deck.id && cards.length < 3) {
@@ -66,7 +66,7 @@ if (deck && deck.id && cards.length < 3) {
   return (
     <div className="container">
       <p className="text-center">
-        loading ...
+        lodaing ...
       </p>
     </div>
   )

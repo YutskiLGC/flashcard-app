@@ -58,7 +58,7 @@ function EditDeck() {
       <h1>Edit Deck</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Name</label>
+          <label for="name">Name</label>
           <input 
           type="text" 
           className="form-control" 
@@ -69,7 +69,7 @@ function EditDeck() {
         </div>
         <br />
         <div className="form-group">
-          <label htmlFor="description">Description</label>
+          <label for="description">Description</label>
           <textarea 
           type="text" 
           className="form-control" 

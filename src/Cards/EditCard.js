@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, useParams, Link } from "react-router-dom";
 import { readDeck, readCard, updateCard } from "../utils/api/index";
-import CardForm from "./CardsCardForm";
+import CardForm from "./CardForm";
 
 function EditCard() {
   const [deck, setDeck] = useState({});
@@ -19,61 +19,56 @@ function EditCard() {
         const cardData = await readCard(cardId, abortController.signal);
         setDeck(deckData);
         setCard(cardData);
-        //         setFront(cardData.front);
-        //         setBack(cardData.back);
-      } catch (error) {
+//         setFront(cardData.front);
+//         setBack(cardData.back);
+      }
+      catch (error) {
         console.log("error creating deck list");
       }
       return () => {
         abortController.abort();
-      };
-    }
+      }
+    }  
     loadDeckAndCards();
-  }, [deckId, cardId]);
+  }, []);
 
   //when form saved, card will be added to deck and user can add new cards
-
+  
   const submitHandler = async (e) => {
     e.preventDefault();
-    const abortController = new AbortController();
-    await updateCard(card, abortController.signal);
-    history.push(`/decks/${deckId}`);
-  };
-
+      const abortController = new AbortController();
+      await updateCard(card, abortController.signal);
+      history.push(`/decks/${deckId}`);
+};
+  
   const onChangeHandler = (e) => {
     setCard({
-      ...card,
-      [e.target.name]: e.target.value,
+    ...card,
+    [e.target.name]: e.target.value,
     });
-  };
+};
 
   return (
     <div>
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
-          <li className="breadcrumb-item">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="breadcrumb-item">
-            <Link to={`/decks/${deckId}`}>{deck.name}</Link>
-          </li>
-          <li className="breadcrumb-item active" aria-current="page">
-            Edit Card {cardId}
-          </li>
+          <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+          <li className="breadcrumb-item"><Link to={`/decks/${deckId}`}>{deck.name}</Link></li>
+          <li className="breadcrumb-item active" aria-current="page">Edit Card {cardId}</li>
         </ol>
       </nav>
       <h1>EditCard</h1>
       <div className="card-info">
-        <CardForm
+        <CardForm 
           front={card.front}
           back={card.back}
           deck={deck}
           handleSubmit={submitHandler}
-          handleChange={onChangeHandler}
-        />
+          handleChange = {onChangeHandler}
+          />
       </div>
     </div>
-  );
+  )
 }
 
 export default EditCard;

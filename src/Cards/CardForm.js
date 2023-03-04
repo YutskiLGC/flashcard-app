@@ -11,7 +11,7 @@ function CardForm({ onChangeBackHandler, onChangeFrontHandler, submitHandler, fr
       
       <form onSubmit={submitHandler}>
         <div className="form-group">
-          <label htmlFor="front">Front</label>
+          <label for="front">Front</label>
           <textarea 
           type="text" 
           className="form-control" 
@@ -21,8 +21,8 @@ function CardForm({ onChangeBackHandler, onChangeFrontHandler, submitHandler, fr
           value={front}
           ></textarea>
         </div>
-        <div className="form-group">
-          <label htmlFor="back">Back</label>
+        <div class="form-group">
+          <label for="back">Back</label>
           <textarea 
           type="text" 
           className="form-control" 
