@@ -34,10 +34,8 @@ function DeckList() {
     return (
       <div className="card mb-3">
       <div className="card-body">
-        <h5 className="card-title">{deck.name}
+        <h5 className="card-title">{deck.name}</h5>
           <p className="card-text"><small className="text-muted float-right" >{deck.cards.length} cards</small></p>
-        </h5>
-        <br></br>
           <p className="card-text">{deck.description}</p>
         <button type="button" className="btn btn-secondary mx-2" onClick={() => history.push(`/decks/${deck.id}`)}>View</button>
         <button type="button" className="btn btn-primary" onClick={() => history.push(`/decks/${deck.id}/study`)}>Study</button>
