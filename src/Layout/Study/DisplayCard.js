@@ -4,7 +4,7 @@ import NotEnoughCards from "./NotEnoughCards";
 
 
 
-function DisplayCard({deck, deckId}) {
+function DisplayCard({deck}) {
 
     const [card, setCard]= useState(0)
     const [flip, setFlip] = useState(true)

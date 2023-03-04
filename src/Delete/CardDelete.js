@@ -1,7 +1,7 @@
 import React from "react";
 import { deleteCard } from "../utils/api/index";
 
-function CardDelete({cardId, deckId}) {
+function CardDelete({cardId}) {
   
   //Function invoked when delete button is clicked for specific card ID
   function handleCardDelete() {
