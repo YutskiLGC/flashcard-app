@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { readDeck } from "../../utils/api/index";
-import Navbar from "./Navbar";
+import Navbar from "./StudyNavBar";
 import DisplayCard from "./DisplayCard";
 
 function Study() {

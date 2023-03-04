@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Link, useHistory } from "react-router-dom";
 import { createDeck } from "../../utils/api/index";
-import Navbar from "./NavBar";
+import Navbar from "./CreateNavBar";
 
 function CreateDeck() {
     const history = useHistory()

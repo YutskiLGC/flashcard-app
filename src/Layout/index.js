@@ -3,12 +3,12 @@ import { Switch, Route } from "react-router-dom";
 import Header from "./Header";
 import NotFound from "./NotFound";
 import Home from "./Home";
-import CreateDeck from "../Deck/CreateDeck";
+import CreateDeck from "../Deck/DeckCreateDeck";
 import Deck from "../Deck/Deck";
-import Study from "../Deck/Study";
-import EditDeck from "../Deck/EditDeck";
-import AddCard from "../Cards/AddCard";
-import EditCard from "../Cards/EditCard";
+import Study from "../Deck/DeckStudy";
+import EditDeck from "../Deck/DeckEditDeck";
+import AddCard from "../Cards/CardsAddCard";
+import EditCard from "../Cards/CardsEditCard";
 
 function Layout() {
   return (

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import {Link, useHistory, useRouteMatch, useParams} from "react-router-dom";
 import { deleteDeck, readDeck } from "../../utils/api/index";
 import ListCards from "./ListCards";
-import Navbar from "./NavBar";
+import Navbar from "./DeckNavBar";
 
 function ListDecks() {
   const history = useHistory()
