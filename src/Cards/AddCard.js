@@ -3,7 +3,7 @@ import { useParams, Link, useHistory } from "react-router-dom";
 import { readDeck, createCard } from "../utils/api/index";
 import CardForm from "./CardForm";
 
-function AddCard({card}) {
+function AddCard() {
   const [deck, setDeck] = useState({}); 
   const [front, setFront] = useState("");
   const [back, setBack] = useState("");

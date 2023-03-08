@@ -21,7 +21,7 @@ headers.append("Content-Type", "application/json");
  *  a copy of the deck instance with the `cards` property removed.
  */
 function stripCards(deck) {
-  const { cards, ...deckWithoutCards } = deck;
+  const { ...deckWithoutCards } = deck;
   return deckWithoutCards;
 }
 
@@ -193,7 +193,7 @@ export async function readCard(cardId, signal) {
  * @returns {Promise<Error|*>}
  *  a promise that resolves to the updated card.
  */
-export async function updateCard(updatedCard, signal) {
+export async function updateCard(updatedCard) {
   const url = `${API_BASE_URL}/cards/${updatedCard.id}`;
   const options = {
     method: "PUT",
