@@ -4,7 +4,7 @@ import { useHistory, useParams } from "react-router-dom";
 function CardForm({
   onChangeBackHandler,
   onChangeFrontHandler,
-  submitHandler,
+  handleSubmit,
   front,
   back,
 }) {
@@ -15,7 +15,7 @@ function CardForm({
     <div>
       <h1>CardForm</h1>
 
-      <form onSubmit={submitHandler}>
+      <form>
         <div className="form-group">
           <label htmlFor="front">Front</label>
           <textarea
@@ -46,7 +46,7 @@ function CardForm({
       >
         Done
       </button>
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" className="btn btn-primary" onClick={handleSubmit}>
         Save
       </button>
     </div>
