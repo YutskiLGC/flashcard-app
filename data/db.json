@@ -71,6 +71,24 @@
       "back": "abcde",
       "deckId": 1,
       "id": 11
+    },
+    {
+      "front": "abcde",
+      "back": "abcde",
+      "deckId": 1,
+      "id": 12
+    },
+    {
+      "front": "Dynamight",
+      "back": "Katsuki Bakugou",
+      "deckId": 3,
+      "id": 13
+    },
+    {
+      "front": "Deku",
+      "back": "Izuku Midoryia",
+      "deckId": 3,
+      "id": 14
     }
   ]
 }

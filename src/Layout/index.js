@@ -4,7 +4,7 @@ import Header from "./Header";
 import NotFound from "./NotFound";
 import Home from "./Home";
 import CreateDeck from "../Deck/CreateDeck";
-import Deck from "../Deck/Deck";
+import Deck from "../Deck/Deck.js";
 import Study from "../Deck/Study";
 import EditDeck from "../Deck/EditDeck";
 import AddCard from "../Cards/AddCard";
